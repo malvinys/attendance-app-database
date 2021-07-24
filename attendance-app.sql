@@ -11,7 +11,7 @@
  Target Server Version : 40406
  File Encoding         : 65001
 
- Date: 24/07/2021 11:30:16
+ Date: 24/07/2021 17:31:53
 */
 
 
@@ -67,14 +67,14 @@ db.getCollection("lookupactivities").insert([ {
     _id: ObjectId("60eaa4b9eed4de2264002d58"),
     name: "Check-In",
     status: 1,
-    createdBy: 1,
+    createdBy: "1",
     createdAt: ISODate("2021-07-11T07:58:35.000Z")
 } ]);
 db.getCollection("lookupactivities").insert([ {
     _id: ObjectId("60eaa5aceed4de2264002d5e"),
     name: "Check-Out",
     status: 1,
-    createdBy: 1,
+    createdBy: "1",
     createdAt: ISODate("2021-07-11T07:58:35.000Z")
 } ]);
 
@@ -130,14 +130,14 @@ db.getCollection("roles").insert([ {
     _id: ObjectId("60fa827feed4de28c0003442"),
     name: "Super Admin",
     status: 1,
-    createdBy: 1,
+    createdBy: "1",
     createdAt: ISODate("2021-07-23T08:48:54.000Z")
 } ]);
 db.getCollection("roles").insert([ {
     _id: ObjectId("60fa82a3eed4de28c0003444"),
     name: "General User",
     status: 1,
-    createdBy: 1,
+    createdBy: "1",
     createdAt: ISODate("2021-07-23T08:48:54.000Z")
 } ]);
 
@@ -197,19 +197,6 @@ db.createCollection("userattendances",{
 // ----------------------------
 // Documents of userattendances
 // ----------------------------
-db.getCollection("userattendances").insert([ {
-    _id: ObjectId("60fb8a8c97bf2c0e5c52b37b"),
-    userId: "60fa82d4eed4de28c0003445",
-    lookupActivitiesId: "60eaa4b9eed4de2264002d58",
-    lookupActivitiesName: "Check-In",
-    pathPhoto: "/path/foto",
-    latitude: "123",
-    longitude: "123",
-    status: NumberInt("1"),
-    createdBy: "60fa82d4eed4de28c0003445",
-    createdAt: ISODate("2021-07-24T03:35:40.041Z"),
-    __v: NumberInt("0")
-} ]);
 db.getCollection("userattendances").insert([ {
     _id: ObjectId("60fb8c39b63db63238daf4e8"),
     userId: "60fa82d4eed4de28c0003445",
@@ -314,13 +301,13 @@ db.createCollection("users",{
 db.getCollection("users").insert([ {
     _id: ObjectId("60eaa057eed4de2264002d57"),
     email: "administrator@attendanceapp.com",
-    password: "$2b$10$/StNsMNEC1STj8QN5Gr1NuaZjGRz14Qw6cADLIpK6b4y8nOOVR3q.",
-    name: "Administrator App",
-    status: 1,
-    createdBy: "60eaa057eed4de2264002d57",
-    createdAt: ISODate("2021-07-11T07:40:07.311Z"),
+    password: "$10$C05IHYeeoUoMY/Rf2N/MK.qGz6mZ0jg6JOddxHoBhFlnaRvvs.d8e",
+    name: "Administrator",
     rolesId: "60fa827feed4de28c0003442",
-    rolesName: "Super Admin"
+    rolesName: "Super Admin",
+    status: 1,
+    createdBy: "1",
+    createdAt: ISODate("2021-07-11T07:40:07.311Z")
 } ]);
 db.getCollection("users").insert([ {
     _id: ObjectId("60fa82d4eed4de28c0003445"),
@@ -330,6 +317,22 @@ db.getCollection("users").insert([ {
     rolesId: "60fa82a3eed4de28c0003444",
     rolesName: "General User",
     status: 1,
-    createdBy: "60eaa057eed4de2264002d57",
+    createdBy: "1",
     createdAt: ISODate("2021-07-23T08:50:11.000Z")
+} ]);
+db.getCollection("users").insert([ {
+    _id: ObjectId("60fbe2bb1ca24b3d0c66cbf3"),
+    email: "malvinys2@gmail.com",
+    password: "$2b$10$f4UdYDiE0bRkQ.U3ky5yxuLmgLejHdI4ArKOWDIiW/bvtJSpVWnDm",
+    name: "Malvin Yosef 2",
+    rolesId: "60fa82a3eed4de28c0003444",
+    rolesName: "General User",
+    status: NumberInt("0"),
+    createdBy: "60eaa057eed4de2264002d57",
+    createdAt: ISODate("2021-07-24T09:51:55.331Z"),
+    __v: NumberInt("0"),
+    updatedAt: ISODate("2021-07-24T10:02:24.44Z"),
+    updatedBy: "60eaa057eed4de2264002d57",
+    deletedAt: ISODate("2021-07-24T10:19:22.067Z"),
+    deletedBy: "60eaa057eed4de2264002d57"
 } ]);
